@@ -59,10 +59,11 @@ const wuraBtn = document.querySelector(".wura-btn");
 const wura = document.querySelector(".wura");
 const wuraVid = document.querySelector(".wura-vid");
 const wuraPlayButton = document.querySelector(".wura-play-button");
+const mayokunPlayButton = document.querySelector(".mayokun-play-button");
 
 const mayokunBtn = document.querySelector(".mayokun-btn");
 const mayokun = document.querySelector(".mayokun");
-const mayokunvid = document.querySelector(".mayokun-vid");
+const mayokunVid = document.querySelector(".mayokun-vid");
 
 const wandeImg = document.querySelector(".wande-img");
 const wandeBtn = document.querySelector(".wande-btn");
@@ -84,6 +85,11 @@ mayokunBtn.addEventListener("click", () => {
   mayokun.style.scale = "1";
   wuraVid.style.scale = "0";
   wandeImg.style.scale = "0";
+});
+
+mayokunPlayButton.addEventListener("click", () => {
+  mayokunVid.play();
+  mayokunPlayButton.style.opacity = 0;
 });
 
 wandeBtn.addEventListener("click", () => {

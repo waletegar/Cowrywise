@@ -251,7 +251,7 @@ header {
     gap:  8rem;
     margin-inline: 3rem;
     margin-block: 10rem;
-    margin-top: 9rem;
+    /* margin-top: 9rem; */
     
 }
 
@@ -259,21 +259,18 @@ header {
 
 /* MODELS */
 .models {
-    /* height: 620px; */
-    height: 65vh;
-    width: 100%;
-    /* overflow: hidden; */
+    height: 90vh;
+    width: 70%;
     position: relative;
-    border: 1px solid red;
 }
 
 .models::before {
     content: '';
-    height: 130%;
+    height: 150%;
     width: 95%;
     position: absolute;
     left: -30%;
-    top: -10%;
+    top: -20%;
     z-index: -1;
     background-color: var(--lightBrown);
     animation: model-slide 3s;
@@ -316,8 +313,6 @@ header {
 
 .models .wura-vid {
     object-fit: cover;
-    /* height: 620px; */
-    /* height: 50vh; */
     width: 100%;
     height: 100%;
 
@@ -338,21 +333,25 @@ header {
 /* MAYOKUN */
 .models .mayokun {
     position: absolute;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
     scale: 0;
 }
 
 .models .mayokun-vid {
     object-fit: cover;
-    height: 620px;
-    width: 470px;
+    width: 100%;
+    height: 100%;
     
 }
 
 /* WANDE */
 .models .wande-img {
     object-fit: cover;
-    height: 620px;
-    width: 470px;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
     position: absolute;
     scale: 0;
     z-index: 2;
@@ -365,7 +364,7 @@ header {
     gap: 1rem;
     margin-top: 2rem;
     position: absolute;
-    top: 103%;
+    top: 105%;
 
 
 }
@@ -627,12 +626,28 @@ main .cards {
 
 .blue-bg {
     background-color: var(--lightBlue);
-    background-repeat: no-repeat;
-    background-position: right;
-
     padding-top: 5rem;
     padding-bottom: 7rem;
     padding-left: 2rem;
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+.blue-bg:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 75%;
+    height: 85%;
+    opacity: 0.4;
+    background-image: url(https://cowrywise.com/images/illos/security.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
 }
 
 .blue-bg h3 {
@@ -684,6 +699,8 @@ main .cards {
 
     list-style-type: square;
 }
+
+
 
 /* why cowrywise */
 

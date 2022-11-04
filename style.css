@@ -1071,6 +1071,10 @@ footer a:hover {
     
     }
 
+    .nav-links{ 
+        display: none;
+    }
+
 
 
 

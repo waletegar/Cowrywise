@@ -1,12 +1,19 @@
 // NAV
 const navLinks = document.querySelector(".nav-links");
 const hamburger = document.querySelector(".hamburger");
+const hamburgerClose = document.querySelector(".hamburger-close");
+const overlay = document.querySelector(".overlay");
 
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
-  navLinks.classList.toggle("active");
+  // overlay.classList.toggle("active");
+  overlay.style.height = "100%";
 }
+
+hamburgerClose.addEventListener("click", () => {
+  overlay.style.height = "0%";
+});
 
 // MODELS
 

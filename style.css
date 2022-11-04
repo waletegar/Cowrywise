@@ -88,6 +88,92 @@ p{
 } */
 
 /* Header Nav */
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    /* height: 100%; */
+    background-color: var(--lightBlue);
+    overflow: hidden;
+    z-index: 80;
+    transition: .2s;
+}
+.overlay-content {
+
+    margin-top: 3rem;
+    margin-inline: 2rem;
+    list-style: none;   
+    color: white;
+    /* padding-left: 2rem; */
+}
+
+.overlay .nav-list > h3 {
+    color: white;
+    opacity: .9;
+    font-size: 1.8rem;
+    margin-block: 1rem;
+}
+
+.overlay-content .arrow-down {
+    float: right;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    width: 13px;
+    height: 13px;
+    border: 1px solid white;
+    border-left: 0;
+    border-top: 0;
+  
+    transform: rotate(45deg);
+  }
+
+.overlay .nav-list.last {
+    margin-bottom: 2rem;
+}
+
+.overlay .nav-list > p {
+    color: var(--grayishBlue);
+    font-size: 1.2rem;
+    opacity: .7;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1.3rem;
+}
+
+.overlay small {
+    position: absolute;
+    bottom: 3rem;
+
+    margin-inline: 2rem;
+}
+
+.overlay small p {
+
+
+    color: white;
+    opacity: .8;
+    font-size: .7rem;
+    font-weight: 100;
+    line-height:18px;
+    letter-spacing: 2px;
+
+    /* margin-top: 3rem; */
+}
+
+.hamburger-close {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 2.5rem;
+    display: block;
+    cursor: pointer;
+
+    color: white;
+}
+
 nav {
     display: flex;
     padding-block: 1rem;
@@ -127,10 +213,11 @@ nav {
     align-items: center;
     gap: 2rem;
     margin-left: 2rem;
-    list-style: none;   
-
+    list-style: none;      
     position: relative;
 }
+
+
 
 .nav-links .nav-list > p {
     color: var(--fadedBlue);
@@ -323,7 +410,6 @@ header {
     object-fit: cover;
     width: 100%;
     height: 100%;
-
 }
 
 @keyframes model-transition {
@@ -356,6 +442,20 @@ header {
     transition-property: none;
     transition: .1s;
 }
+
+/* .modelActive{
+    position: absolute;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    transition-property: none;
+    transition: .1s;
+
+
+    scale: 1;
+    z-index: +7;
+} */
+
 
 .models .mayokun-vid {
     object-fit: cover;
@@ -922,6 +1022,12 @@ footer a:hover {
 
 
 @media ( max-width: 845px ) {
+    /* .overlay .active{
+        display: block;
+    } */
+
+
+
     .nav-flex {
         justify-content: space-between;
         position: relative;
@@ -935,6 +1041,8 @@ footer a:hover {
         cursor: pointer;
         scale: 1;
     }
+
+
 
     .nav-flex .hamburger:focus{
         outline: 0;
@@ -963,9 +1071,7 @@ footer a:hover {
     
     }
 
-    .nav-flex .active{
-        scale: 1;
-    }
+
 
 
 
